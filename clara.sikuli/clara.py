@@ -1,11 +1,10 @@
-def setUpChrome():
+def setUp(self):
     App.open("Google Chrome")
 
-def closeChrome():
+def tearDown(self):
     App.close("Google Chrome")
 
 def setUpClara():
-    App.open("Google Chrome")
     click("1526994917663.png")
     paste("https://mae-attempt.herokuapp.com/")
     type("Key.ENTER")

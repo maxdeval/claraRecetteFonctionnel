@@ -70,14 +70,13 @@
 <h2>clara.sikuli</h2> <a href="clara.zip">(Download this script)</a>
 </div>
 <pre class="sikuli-code">
-<span class="kw">def</span> setUpChrome():
+<span class="kw">def</span> setUp(self):
     App.open(<span class="str">"Google Chrome"</span>)
 
-<span class="kw">def</span> closeChrome():
+<span class="kw">def</span> tearDown(self):
     App.close(<span class="str">"Google Chrome"</span>)
 
 <span class="kw">def</span> setUpClara():
-    App.open(<span class="str">"Google Chrome"</span>)
     <span class="skw">click</span>(<img src="1526994917663.png" />)
     paste(<span class="str">"https://mae-attempt.herokuapp.com/"</span>)
     <span class="skw">type</span>(<span class="str">"Key.ENTER"</span>)
