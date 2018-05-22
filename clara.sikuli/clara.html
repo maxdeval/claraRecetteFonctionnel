@@ -76,11 +76,13 @@
 <span class="kw">def</span> tearDown(self):
     App.close(<span class="str">"Google Chrome"</span>)
 
-<span class="kw">def</span> setUpClara():
+<span class="kw">def</span> testClara():
     <span class="skw">click</span>(<img src="1526994917663.png" />)
     paste(<span class="str">"https://mae-attempt.herokuapp.com/"</span>)
-    <span class="skw">type</span>(<span class="str">"Key.ENTER"</span>)
+    <span class="skw">type</span>(Key.ENTER)
     <span class="kw">assert</span> exists(Pattern(<img src="1526995285010.png" />).targetOffset(-<span class="dig">26</span>,<span class="dig">100</span>))
+
+testClara()
 </pre>
 </body>
 </html>
