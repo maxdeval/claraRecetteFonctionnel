@@ -13,6 +13,9 @@ class TestBasicScenario(unittest.TestCase):
         wait(4)
         assert exists("1527080917841.png")
         
+    def test_02_start_clara(self):
+         assert exists(Pattern("1527082946751.png").similar(0.50))
+         
         
 
 
