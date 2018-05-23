@@ -70,16 +70,15 @@
 <h2>mainClara.sikuli</h2> <a href="mainClara.zip">(Download this script)</a>
 </div>
 <pre class="sikuli-code">
-<span class="kw">import</span> unittest
+<span class="kw">from</span> sikuli.Sikuli <span class="kw">import</span> *
 <span class="kw">from</span> clara <span class="kw">import</span> *
+<span class="kw">import</span> unittest
+
 
 suite = unittest.TestLoader().loadTestsFromTestCase(TestBasicScenario)
 unittest.TextTestRunner(verbosity=<span class="dig">2</span>).run(suite)
 
-setUp(self)
 test_01_open_clara(self)
-test_02_start_form(self)
-tearDown(self)
 </pre>
 </body>
 </html>
