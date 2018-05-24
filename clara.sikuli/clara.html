@@ -82,7 +82,7 @@
 <span class="cmt">#       App.close("Google Chrome")</span>
     <span class="kw">def</span> test_01_open_clara(self):
         <span class="skw">click</span>(<img src="barre_de_recherche.png" />)
-        paste(<span class="str">"https://clara.pole-emploi.fr/"</span>)
+        paste(<span class="str">"https://mae-attempt.herokuapp.com/"</span>)
         <span class="skw">type</span>(Key.ENTER)
         <span class="skw">wait</span>(<span class="dig">4</span>)
         <span class="kw">assert</span> exists(<img src="1527080917841.png" />)
@@ -95,6 +95,15 @@
         <span class="skw">click</span>(<img src="1527087746609.png" />)
 
         <span class="kw">assert</span> exists(Pattern(<img src="1527082946751.png" />).similar(<span class="dig">0.50</span>))
+    <span class="kw">def</span> test_03_pas_inscrit(self):
+<span class="cmt">#        click("barre_de_recherche.png")</span>
+<span class="cmt">#        paste("https://mae-attempt.herokuapp.com/")</span>
+<span class="cmt">#        type(Key.ENTER)</span>
+<span class="cmt">#        wait(4)</span>
+<span class="cmt">#        click("1527087746609.png")</span>
+        <span class="skw">click</span>(Pattern(<img src="1527146499559.png" />).targetOffset(<span class="dig">20</span>,<span class="dig">3</span>))
+        <span class="skw">click</span>(<img src="1527147045965.png" />)
+        <span class="kw">assert</span> exists(<img src="1527146556717.png" />)
 </pre>
 </body>
 </html>
