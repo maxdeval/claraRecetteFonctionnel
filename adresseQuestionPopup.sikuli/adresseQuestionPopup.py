@@ -29,5 +29,6 @@ class AdresseQuestionPopup(unittest.TestCase):
         wait(2)
         assert exists("adresse_question_popup.png")
         
-        
+suite = unittest.TestLoader().loadTestsFromTestCase(AdresseQuestionPopup)
+unittest.TextTestRunner(verbosity=2).run(suite)        
         
