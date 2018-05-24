@@ -78,16 +78,28 @@
 
     <span class="kw">def</span> setUp(self):
         App.open(<span class="str">"Firefox"</span>)
-    <span class="kw">def</span> tearDown(self):
-       App.close(<span class="str">"Firefox"</span>)
-    <span class="kw">def</span> test_adresse_question_pop(self):
-        <span class="skw">click</span>(<img src="barre_de_recherche.png" />)
+<span class="cmt">#    def tearDown(self):</span>
+<span class="cmt">#       App.close("Firefox")</span>
+    <span class="kw">def</span> test_adresse_question_popup(self):
+        <span class="skw">click</span>(<img src="barre_recherche.png" />)
         paste(<span class="str">"https://mae-attempt.herokuapp.com/"</span>)
         <span class="skw">type</span>(Key.ENTER)
         <span class="skw">wait</span>(<span class="dig">4</span>)
         <span class="skw">click</span>(<img src="1527087746609.png" />)
         <span class="skw">click</span>(Pattern(<img src="1527146499559.png" />).targetOffset(<span class="dig">20</span>,<span class="dig">3</span>))
-        <span class="skw">click</span>(<img src="1527147045965.png" />)
+        <span class="skw">click</span>(<img src="continuer.png" />)
+        <span class="skw">click</span>(<img src="assurance_chomage.png" />)
+        <span class="skw">click</span>(<img src="continuer.png" />)
+        <span class="skw">click</span>(<img src="montant_mois.png" />)
+        paste(<span class="str">"300"</span>)
+        <span class="skw">click</span>(<img src="continuer.png" />)
+        <span class="skw">wait</span>(<span class="dig">2</span>)
+        paste(<span class="str">"16"</span>)
+        <span class="skw">click</span>(<img src="continuer.png" />)
+        <span class="skw">click</span>(<img src="bac_3_licence.png" />)
+        <span class="skw">click</span>(<img src="continuer.png" />)
+        <span class="skw">wait</span>(<span class="dig">2</span>)
+        <span class="kw">assert</span> exists(<img src="adresse_question_popup.png" />)
 </pre>
 </body>
 </html>
