@@ -1,12 +1,9 @@
 from sikuli.Sikuli import *
-from clara import *
+from adresseQuestionPop import *
 import unittest
 
 
 suite = unittest.TestLoader().loadTestsFromTestCase(TestBasicScenario)
 unittest.TextTestRunner(verbosity=2).run(suite)
 
-test_01_open_clara(self)
-test_02_start_clara(self)
-test_03_pas_inscrit(self)
-
+test_adresse_question_pop(self):
