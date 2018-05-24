@@ -72,13 +72,11 @@
 <pre class="sikuli-code">
 <span class="kw">from</span> sikuli.Sikuli <span class="kw">import</span> *
 <span class="kw">from</span> adresseQuestionPopup <span class="kw">import</span> *
+<span class="kw">from</span> homeWarningBrowserVersion <span class="kw">import</span> *
 <span class="kw">import</span> unittest
 
-
-suite = unittest.TestLoader().loadTestsFromTestCase(AdresseQuestionPopup)
-unittest.TextTestRunner(verbosity=<span class="dig">2</span>).run(suite)
-
 test_adresse_question_popup(self)
+test_home_warning_browser(self) <span class="cmt">#Tested with FF16</span>
 </pre>
 </body>
 </html>

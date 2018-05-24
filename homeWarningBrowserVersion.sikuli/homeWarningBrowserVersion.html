@@ -67,41 +67,26 @@
    </head>
 <body>
 <div class="info">
-<h2>adresseQuestionPopup.sikuli</h2> <a href="adresseQuestionPopup.zip">(Download this script)</a>
+<h2>homeWarningBrowserVersion.sikuli</h2> <a href="homeWarningBrowserVersion.zip">(Download this script)</a>
 </div>
 <pre class="sikuli-code">
 <span class="kw">from</span> sikuli.Sikuli <span class="kw">import</span> *
 <span class="kw">import</span> unittest
 
-
-<span class="kw">class</span> AdresseQuestionPopup(unittest.TestCase):
+<span class="kw">class</span> HomeWarningBrowserVersion(unittest.TestCase):
 
     <span class="kw">def</span> setUp(self):
         App.open(<span class="str">"Firefox"</span>)
 <span class="cmt">#    def tearDown(self):</span>
 <span class="cmt">#       App.close("Firefox")</span>
-    <span class="kw">def</span> test_adresse_question_popup(self):
-        <span class="skw">click</span>(<img src="barre_recherche.png" />)
-        paste(<span class="str">"https://mae-attempt.herokuapp.com/"</span>)
+    <span class="kw">def</span> test_home_warning_browser(self):
+        <span class="skw">click</span>(<img src="barre_recherche_ff16.png" />)
+        paste(<span class="str">"http://localhost:3000//"</span>)
         <span class="skw">type</span>(Key.ENTER)
         <span class="skw">wait</span>(<span class="dig">4</span>)
-        <span class="skw">click</span>(<img src="1527087746609.png" />)
-        <span class="skw">click</span>(Pattern(<img src="1527146499559.png" />).targetOffset(<span class="dig">20</span>,<span class="dig">3</span>))
-        <span class="skw">click</span>(<img src="continuer.png" />)
-        <span class="skw">click</span>(<img src="assurance_chomage.png" />)
-        <span class="skw">click</span>(<img src="continuer.png" />)
-        <span class="skw">click</span>(<img src="montant_mois.png" />)
-        paste(<span class="str">"300"</span>)
-        <span class="skw">click</span>(<img src="continuer.png" />)
-        <span class="skw">wait</span>(<span class="dig">2</span>)
-        paste(<span class="str">"16"</span>)
-        <span class="skw">click</span>(<img src="continuer.png" />)
-        <span class="skw">click</span>(<img src="bac_3_licence.png" />)
-        <span class="skw">click</span>(<img src="continuer.png" />)
-        <span class="skw">wait</span>(<span class="dig">2</span>)
-        <span class="kw">assert</span> exists(<img src="adresse_question_popup.png" />)
+        <span class="kw">assert</span> exists(<img src="brower_warning.png" />)
 
-suite = unittest.TestLoader().loadTestsFromTestCase(AdresseQuestionPopup)
+suite = unittest.TestLoader().loadTestsFromTestCase(HomeWarningBrowserVersion)
 unittest.TextTestRunner(verbosity=<span class="dig">2</span>).run(suite)
 </pre>
 </body>
