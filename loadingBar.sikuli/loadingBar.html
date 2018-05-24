@@ -67,18 +67,31 @@
    </head>
 <body>
 <div class="info">
-<h2>mainTest.sikuli</h2> <a href="mainTest.zip">(Download this script)</a>
+<h2>loadingBar.sikuli</h2> <a href="loadingBar.zip">(Download this script)</a>
 </div>
 <pre class="sikuli-code">
 <span class="kw">from</span> sikuli.Sikuli <span class="kw">import</span> *
-<span class="kw">from</span> adresseQuestionPopup <span class="kw">import</span> *
-<span class="kw">from</span> homeWarningBrowserVersion <span class="kw">import</span> *
-<span class="kw">from</span> loadingBar <span class="kw">import</span> *
 <span class="kw">import</span> unittest
 
-<span class="cmt">#test_adresse_question_popup(self)</span>
-<span class="cmt">#test_home_warning_browser(self) #test used with FF16 in localhost</span>
-test_loading_bar(self) <span class="cmt">#test made with network chrome devTool</span>
+<span class="kw">class</span> LoadingBar(unittest.TestCase):
+
+    <span class="kw">def</span> setUp(self):
+        App.open(<span class="str">"Google Chrome"</span>)
+<span class="cmt">#    def tearDown(self):</span>
+<span class="cmt">#       App.close("Google Chrome")</span>
+    <span class="kw">def</span> test_loading_bar(self):
+        <span class="skw">click</span>(<img src="chrome_bar.png" />)
+        paste(<span class="str">"http://localhost:3000/"</span>)
+        <span class="skw">type</span>(Key.ENTER)
+        <span class="skw">wait</span>(<span class="dig">15</span>)
+        <span class="skw">click</span>(<img src="je_commence.png" />)
+        <span class="skw">wait</span>(<span class="dig">15</span>)
+        <span class="kw">assert</span> exists(<img src="loading.png" />)
+
+
+
+suite = unittest.TestLoader().loadTestsFromTestCase(LoadingBar)
+unittest.TextTestRunner(verbosity=<span class="dig">2</span>).run(suite)
 </pre>
 </body>
 </html>
